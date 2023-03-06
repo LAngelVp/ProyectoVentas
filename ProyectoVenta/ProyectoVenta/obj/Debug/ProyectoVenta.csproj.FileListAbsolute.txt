@@ -1,0 +1,16 @@
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\bin\Debug\ProyectoVenta.exe.config
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\bin\Debug\ProyectoVenta.exe
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\bin\Debug\ProyectoVenta.pdb
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\ProyectoVenta.csproj.AssemblyReference.cache
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\ProyectoVenta.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\MainWindow.g.cs
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\App.g.cs
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\ProyectoVenta_MarkupCompile.cache
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\ProyectoVenta_MarkupCompile.lref
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\MainWindow.baml
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\ProyectoVenta.g.resources
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\ProyectoVenta.Properties.Resources.resources
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\ProyectoVenta.csproj.GenerateResource.cache
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\ProyectoVenta.csproj.CoreCompileInputs.cache
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\ProyectoVenta.exe
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\ProyectoVenta.pdb
