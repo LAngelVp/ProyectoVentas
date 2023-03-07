@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoVenta.Vistas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,25 @@ namespace ProyectoVenta
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(Usuario.Text=="luis" && Contraseña.Password == "hola")
+            {
+                VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
+                ventanaPrincipal.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("No has ingresado bien las credenciales del usuario");
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

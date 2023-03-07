@@ -14,3 +14,6 @@ C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\Pro
 C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\ProyectoVenta.csproj.CoreCompileInputs.cache
 C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\ProyectoVenta.exe
 C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\ProyectoVenta.pdb
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\Vistas\VentanaPrincipal.g.cs
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\Vistas\VentanaPrincipal.baml
+C:\Users\Ing. Luis Pérez\source\repos\ProyectoVenta\ProyectoVenta\obj\Debug\App.baml

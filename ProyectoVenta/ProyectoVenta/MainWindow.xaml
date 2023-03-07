@@ -6,23 +6,145 @@
         xmlns:local="clr-namespace:ProyectoVenta"
         mc:Ignorable="d"
         Title="Login" 
+        MinHeight="450"
+        MaxHeight="450"
         Height="450" 
-        Width="350" HorizontalContentAlignment="Center" Icon="/LogoPersonal.png">
-    <Grid>
-        <Image Height="64" VerticalAlignment="Top" Margin="0,60,0,0" Source="/LogoPersonal.png" HorizontalAlignment="Center"/>
-        <Grid VerticalAlignment="Top" Height="267" Margin="0,167,0,0" Background="White">
-            <Label Content="Usuario" HorizontalAlignment="Left" Margin="40,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.518,1.473"/>
-            <TextBox HorizontalAlignment="Left" Margin="40,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="280"/>
-            <Label Content="Password" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.518,1.473"/>
-            <PasswordBox HorizontalAlignment="Left" Margin="40,110,0,0" VerticalAlignment="Top" Width="280"/>
-            <Button Content="Ingresar" HorizontalAlignment="Center" Margin="0,170,0,0" VerticalAlignment="Top" Height="30" Width="165" FontWeight="Bold">
+        MinWidth="350"
+        MaxWidth="350"
+        Width="350" 
+        HorizontalContentAlignment="Center" 
+        Icon="/LogoPersonal.png"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        >
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#344799"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#344799"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="BotonRedondeadoStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Border CornerRadius="20"
+            BorderBrush="Blue"
+            Background="White"
+            BorderThickness="2">
+        <Grid>
+            <Image Height="73" VerticalAlignment="Top" Margin="0,63,0,0" Source="/LogoPersonal.png" HorizontalAlignment="Center" Width="238"/>
+            <Grid VerticalAlignment="Top" 
+                  Height="283" Margin="0,167,0,0" 
+                  Background="Transparent">
+                <Label FontSize="14" 
+                   FontWeight="Bold"
+                   Content="Usuario:" 
+                   HorizontalAlignment="Left" 
+                   Margin="40,21,0,0" 
+                   VerticalAlignment="Top" 
+                   RenderTransformOrigin="0.518,1.473" FontFamily="SimSun-ExtB" FontStyle="Italic"/>
+                <TextBox x:Name="Usuario" FontSize="16" 
+                     HorizontalAlignment="Left" 
+                     Margin="40,52,0,0" 
+                     TextWrapping="Wrap" 
+                     VerticalAlignment="Top" 
+                     Width="265" 
+                     Height="21" 
+                     Text=""/>
+                <Label Content="Password:" 
+                   HorizontalAlignment="Left" 
+                   Margin="40,81,0,0" 
+                   VerticalAlignment="Top" 
+                   RenderTransformOrigin="0.518,1.473" 
+                   FontFamily="SimSun-ExtB" 
+                   FontSize="14" 
+                   FontWeight="Bold" 
+                   FontStyle="Italic"/>
+                <PasswordBox x:Name="Contraseña" FontSize="14" 
+                         HorizontalAlignment="Left" 
+                         Margin="40,113,0,0" 
+                         VerticalAlignment="Top" 
+                         Width="265" 
+                         Height="21" 
+                         Password=""/>
+                <Button Style="{DynamicResource BotonRedondeadoStyle}" Content="Ingresar" 
+                    HorizontalAlignment="Center" 
+                    Margin="0,158,0,0" 
+                    VerticalAlignment="Top" 
+                    Height="30" 
+                    Width="166" 
+                    FontWeight="Bold" BorderBrush="White" BorderThickness="1,1,1,1" ClipToBounds="True" Cursor="Hand" Click="Button_Click" Background="#FF0C0D80" Foreground="White" OpacityMask="#FF36822C"/>
+            </Grid>
+            <Button Style="{DynamicResource RedondearBotonSalida}" Content="X" 
+                    HorizontalAlignment="Left" 
+                    Margin="309,10,0,0" 
+                    VerticalAlignment="Top" Height="24" Width="27" FontWeight="Bold" Cursor="Hand" Click="Button_Click_1"
+                    >
                 <Button.Background>
-                    <RadialGradientBrush>
-                        <GradientStop Color="#FF2AF900" Offset="0.157"/>
-                        <GradientStop Color="#FFAABEFF" Offset="1"/>
-                    </RadialGradientBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="1,0">
+                        <LinearGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform X="0"/>
+                            </TransformGroup>
+                        </LinearGradientBrush.RelativeTransform>
+                        <GradientStop Color="#FF0002A4"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
                 </Button.Background>
             </Button>
         </Grid>
-    </Grid>
+    </Border>
 </Window>
