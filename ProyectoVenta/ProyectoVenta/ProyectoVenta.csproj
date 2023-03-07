@@ -102,11 +102,32 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="LogoPersonal.png" />
+    <Resource Include="SRC\LogoPersonal.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Modelos\" />
     <Folder Include="VistasModelo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SRC\IconMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SRC\Inventario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SRC\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SRC\menu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Vistas\Inventario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SRC\invenchico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SRC\inven.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
